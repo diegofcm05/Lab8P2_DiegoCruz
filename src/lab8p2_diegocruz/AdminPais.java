@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author dfcm9
  */
-public class AdminPais implements Serializable{
+public class AdminPais{
     
     private ArrayList <Pais> paises = new ArrayList();
     private File archivo = null;
@@ -40,6 +40,10 @@ public class AdminPais implements Serializable{
 
     public void setArchivo(File archivo) {
         this.archivo = archivo;
+    }
+    
+    public void setPais(Pais x){
+        paises.add(x);
     }
 
     public void cargarArchivo() {

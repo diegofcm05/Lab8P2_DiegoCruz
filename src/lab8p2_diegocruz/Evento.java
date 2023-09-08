@@ -4,11 +4,13 @@
  */
 package lab8p2_diegocruz;
 
+import java.io.Serializable;
+
 /**
  *
  * @author dfcm9
  */
-public class Evento {
+public class Evento implements Serializable{
     
     String estilo;
     int distancia;

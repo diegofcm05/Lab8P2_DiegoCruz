@@ -4,11 +4,13 @@
  */
 package lab8p2_diegocruz;
 
+import java.io.Serializable;
+
 /**
  *
  * @author dfcm9
  */
-public class Nadador {
+public class Nadador implements Serializable {
     
     private String nombre;
     private Pais nacionalidad;

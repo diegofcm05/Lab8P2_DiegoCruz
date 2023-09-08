@@ -10,13 +10,14 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author dfcm9
  */
-public class AdminNadador {
+public class AdminNadador{
     
     private ArrayList <Nadador> nadadores = new ArrayList();
     private File archivo = null;
@@ -42,6 +43,9 @@ public class AdminNadador {
         this.archivo = archivo;
     }
     
+    public void setNadador(Nadador x){
+        nadadores.add(x);
+    }
     public void cargarArchivo() {
         try {            
             nadadores = new ArrayList();
