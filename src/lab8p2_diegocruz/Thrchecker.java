@@ -115,13 +115,13 @@ public class Thrchecker extends Thread{
                 int valor = Math.max(pbnad1.getValue(), pbnad2.getValue());
                 valor = Math.max(valor, pbnad2.getValue());
                 if (valor == pbnad1.getValue()){
-                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord"+rec+"\nGanador: "+a.getNombre());
+                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord: "+rec+"\nGanador: "+a.getNombre());
                 }
                 else if (valor == pbnad2.getValue()){
-                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord"+rec+"\nGanador: "+b.getNombre());
+                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord: "+rec+"\nGanador: "+b.getNombre());
                 }
                 else if (valor == pbnad3.getValue()){
-                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord"+rec+"\nGanador: "+c.getNombre());
+                    JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord: "+rec+"\nGanador: "+c.getNombre());
                     
                 }
                 
