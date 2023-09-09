@@ -113,7 +113,7 @@ public class Thrchecker extends Thread{
                 
                 JOptionPane.showMessageDialog(null,"Tenemos un ganador!");
                 int valor = Math.max(pbnad1.getValue(), pbnad2.getValue());
-                valor = Math.max(valor, pbnad2.getValue());
+                valor = Math.max(valor, pbnad3.getValue());
                 if (valor == pbnad1.getValue()){
                     JOptionPane.showMessageDialog(null, "Evento:\nEstilo:"+est+"\nDistancia:"+dist+"\nRecord: "+rec+"\nGanador: "+a.getNombre());
                 }
