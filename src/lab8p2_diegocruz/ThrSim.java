@@ -35,9 +35,9 @@ public class ThrSim extends Thread{
     @Override
     public void run() {
         while (vive) {
-            pisci.setValue(pisci.getValue() + (1+rand.nextInt(7)));
+            pisci.setValue(pisci.getValue() + (1+rand.nextInt(20)));
             try {
-                Thread.sleep(2000);
+                Thread.sleep(600);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }

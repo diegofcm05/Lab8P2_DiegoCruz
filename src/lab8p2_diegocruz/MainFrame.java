@@ -897,7 +897,8 @@ public class MainFrame extends javax.swing.JFrame {
                 ThrSim trnad1 = new ThrSim(jpb_nad1);
                 ThrSim trnad2 = new ThrSim(jpb_nad2);
                 ThrSim trnad3 = new ThrSim(jpb_nad3);
-                
+                Thrchecker acabar = new Thrchecker(jpb_nad1, jpb_nad2, jpb_nad3);
+                acabar.start();
                 if (cb_nad1.getSelectedItem() != null){
                     trnad1.start();
                 }
@@ -908,6 +909,37 @@ public class MainFrame extends javax.swing.JFrame {
                     trnad3.start();
                 }
                 
+                boolean cont = true;
+                while (cont){
+                    if (acabar.isAcabo()){
+                        cont = false;
+                        trnad1.setVida(false);
+                        trnad2.setVida(false);
+                        trnad3.setVida(false);
+                        
+                    }
+                }
+                
+                
+                int valor = Math.max(jpb_nad1.getValue(), jpb_nad2.getValue());
+                valor = Math.max(valor, jpb_nad2.getValue());
+                if (valor == jpb_nad1.getValue()){
+                    JOptionPane.showMessageDialog(this, "Evento:\nEstilo: "+((Evento)cb_eventosim.getSelectedItem()).getEstilo()+
+                            "\nDistancia"+((Evento)cb_eventosim.getSelectedItem()).getDistancia()+"\nRecord: "+((Evento)cb_eventosim.getSelectedItem()).getRecord()
+                            +"\nGanador:"+cb_nad1.getSelectedItem().toString());
+                }
+                else if (valor == jpb_nad2.getValue()){
+                    JOptionPane.showMessageDialog(this, "Evento:\nEstilo: "+((Evento)cb_eventosim.getSelectedItem()).getEstilo()+
+                            "\nDistancia"+((Evento)cb_eventosim.getSelectedItem()).getDistancia()+"\nRecord: "+((Evento)cb_eventosim.getSelectedItem()).getRecord()
+                            +"\nGanador:"+cb_nad2.getSelectedItem().toString());
+                }
+                else if (valor == jpb_nad3.getValue()){
+                    JOptionPane.showMessageDialog(this, "Evento:\nEstilo: "+((Evento)cb_eventosim.getSelectedItem()).getEstilo()+
+                            "\nDistancia"+((Evento)cb_eventosim.getSelectedItem()).getDistancia()+"\nRecord: "+((Evento)cb_eventosim.getSelectedItem()).getRecord()
+                            +"\nGanador:"+cb_nad3.getSelectedItem().toString());
+                    
+                }
+               
                 
             }
             
