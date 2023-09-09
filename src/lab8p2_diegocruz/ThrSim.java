@@ -4,6 +4,7 @@
  */
 package lab8p2_diegocruz;
 
+import java.util.Random;
 import javax.swing.JProgressBar;
 
 /**
@@ -12,14 +13,20 @@ import javax.swing.JProgressBar;
  */
 public class ThrSim extends Thread{
     
+    private Random rand = new Random();
     private JProgressBar pisci;
+    private boolean avanzar;
     private boolean vive;
 
     public ThrSim(JProgressBar pisci) {
         this.pisci = pisci;
+        avanzar = true;
         vive = true;
     }
 
+    public void setAvanzar(boolean avanzar) {
+        this.avanzar = avanzar;
+    }
 
     public void setVida(boolean vive) {
         this.vive = vive;
@@ -28,10 +35,11 @@ public class ThrSim extends Thread{
     @Override
     public void run() {
         while (vive) {
-            
+            pisci.setValue(pisci.getValue() + (1+rand.nextInt(7)));
             try {
-                Thread.sleep(50);
+                Thread.sleep(2000);
             } catch (InterruptedException ex) {
+                ex.printStackTrace();
             }
         }
 
