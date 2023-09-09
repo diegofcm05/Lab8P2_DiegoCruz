@@ -27,6 +27,7 @@ public class MainFrame extends javax.swing.JFrame {
         llenarnads();
         llenareven();
         JOptionPane.showMessageDialog(this, "Cosas que me faltaron: Modificar/Eliminar de Nadadores, Eventos y Listar Ganadores. :) ");
+        JOptionPane.showMessageDialog(this, "Oh y creo que solo se pueden escoger 3 nadadores, pero la validacion esta en el codigo.");
         
         
     }
